@@ -1,4 +1,4 @@
-# Soft Interview Questions
+# Version Control System Interview Questions
 
 ## What is ‘Version Control System’?
 
