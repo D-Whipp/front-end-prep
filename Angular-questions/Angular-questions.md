@@ -6,7 +6,7 @@ If you are well versed in the Angular Framework, then these Frontend Developer I
 
 Data binding is a method of manipulating web page elements through the usage of a web browser. It's utilized in interactive elements like forms, calculators, tutorials, and games on web pages.
 
-![](./images/DataBinding-Angular_Interview_Questions.png)
+![angular questions](./images/DataBinding-Angular_Interview_Questions.png)
 
 Two-way Data Binding is used by Angular. Any modifications made to the user interface mirror the elements in the model state and vice versa.
 
