@@ -139,6 +139,11 @@ _The const declaration is very similar to let:_
     -   Example: if (true) const a = 1;
     -   _SyntaxError: Lexical declaration cannot appear in a single-statment context_
 
+An initializer for a constant is required. You must specify its value in the same declaration.
+  - You cannot write const FOO; _SyntaxError: Missing initializer in constant declaration._
+
+_const_ is immutable!
+
 ## What are some different ways to create an object in JavaScript?
 
 ## How can you get the type of a variable in JavaScript?
