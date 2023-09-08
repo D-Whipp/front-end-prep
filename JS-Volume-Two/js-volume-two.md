@@ -1,5 +1,25 @@
 # Questions taken from r/learnprogramming
 
+## Lexical Scoping vs Dynamic Scoping
+
+### Lexical Scoping
+
+-   The variable always refers to the top-level environment.
+-   It makes it easy to find the scope just by reading the code.
+-   It is easy to make modular code.
+-   It depends on how the code is written.
+-   It provides less flexibility but faster access to non-lexical variables.
+-   It is unrelated to the runtime call stack. A variable's binding can be determined by the program text.
+
+### Dynamic Scoping
+
+-   The variable takes the latest assigned value.
+-   The programmer has to consider multiple possible contexts.
+-   It is not easy to make modular code.
+-   It depends on how the code is executed.
+-   It provides more flexibility but slower access to non-local variables.
+-   It depends on the real-time stack. Each identifier has a global stack of bindings. The compiler first searches the current block and then successively searches all calling functions.
+
 ## What are the different types of variables in JavaScript? How are they different from each other?
 
 Answers taken from MDN web docs.
@@ -103,6 +123,21 @@ const func = () => console.log(letVar); _OK_
     func(); _Called outside TDZ!_
 
 }
+
+### const
+
+The _const_ declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.
+
+_The const declaration is very similar to let:_
+
+-   _const_ declarations are scoped to blocks as well as functions.
+-   _const_ declarations can only be accessed after the place of declaration is reached. For this reason, _const_ declarations are commonly regarded as _non-hoisted_.
+-   _const_ declarations do not create properties on _globalThis_ when declared at the top level of a script.
+-   _const_ declarations cannot be redeclared by any other declaration in the same scope.
+-   _const_ begins declarations, not statements.
+    -   That means you cannot use a lone _const_ declaration as the body of a block (which makes sense, since there's no way to access the variable).
+    -   Example: if (true) const a = 1;
+    -   _SyntaxError: Lexical declaration cannot appear in a single-statment context_
 
 ## What are some different ways to create an object in JavaScript?
 
